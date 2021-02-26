@@ -1,0 +1,15 @@
+.menu {
+    margin-top: 40px;
+    background-color: $Black;
+    &__logo{
+        width: 9.0625em;
+        height: 1.625em;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    } 
+    &__navbar {
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $White;
+    font-family: $font-body;
+}
+
+a, a:active, a:visited {
+    font-family: $font-title;
+    color: $White;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 1.5625em;
+}
+
+ul {
+    list-style: none;
+}
