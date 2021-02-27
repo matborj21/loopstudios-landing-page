@@ -17,10 +17,13 @@
 </head>
 <body>
 
-  <header class="container">
-    <nav class="menu">
-      <div class="menu__logo">
-        <img src="/dist/images/logo.svg" alt="logo">
+  <header class="">
+    <nav class="menu container">
+      <div href="/" class="menu__logo">
+        <a href="/"><img src="/dist/images/logo.svg" alt="logo"></a>
+      </div>
+      <div class="menu__toggle" id="toggler">
+        <div class="menu__hamburger" id="hamburger"></div>
       </div>
       <div class="menu__navbar">
           <ul>
@@ -29,13 +32,7 @@
             <li><a href="#">Events</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Support</a></li>
-          </ul>
-
-          <div class="menu__toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          </ul>        
       </div>
     </nav>
   </header>
