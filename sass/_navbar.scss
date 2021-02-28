@@ -1,42 +1,119 @@
 header {
-    background-color: $Black;
-    height: 100vh;
-
     .menu {
-        padding-top: 40px;
+        padding-top: 2.5rem;
+        padding-left: 1.5625rem;
+        padding-right: 1.5625rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    
+        
+
+        @media screen and (min-width: 1440px) {
+            padding-top: 5.3125rem;
+            padding-left: 13.75rem;
+            padding-right: 13.75rem; 
+        }
+        @media screen and (min-width: 768px) {
+            padding-left: 6.25rem;
+            padding-right: 6.25rem; 
+        }
+
         &__logo{
-            width: 9.0625em;
-            height: 1.625em;
+            width: 9.0625rem;
+            height: auto;
+            z-index: 2;
+
             img {
                 width: 100%;
                 height: auto;
             }
+
+            @media screen and (min-width: 768px) {
+                width: 12.5rem;
+                height: 2.8125;
+            }
+
+            @media screen and (min-width: 968px) {
+                width: 15.625rem;
+            }
+
+            
+            
+            
         } 
         &__navbar {
+
+            font-family: $font-body;
+            font-size: 1.5625rem;
+            position: fixed;
+            background-color: black;
+            top: 0;
+            left: 0;
             display: inline-block;
             width: 100%;
             text-transform: uppercase;
-            padding-top: 150px;
-            font-size: 25px;
+            padding-top: 9.5rem;
+            padding-left: 1.5625rem;
+            padding-right: 1.5625rem;
             
+            height: 100vh;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 500ms, opacity 500ms linear;
+            z-index: 1;
             li:not(:last-child){
-                margin-bottom: 30px;
+                margin-bottom: 1.875rem;
             }
+            &.show {
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 500ms ease-in-out;
+            }
+            @media screen and (min-width: 768px) {
+                padding-top: 185px;
+                padding-left: 100px;
+                padding-right: 100px; 
+            } 
+
+            @media screen and (min-width: 1021px) {
+                
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                background-color: transparent;
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0; 
+                font-size: 1.5625rem;
+                text-transform: capitalize;
+                // font-family: $font-body;
+                width: auto;
+               
+                ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    :not(:last-child){
+                        margin-right: 45px;
+                    }
+                }
+            }
+            
         }
 
 
     
         &__toggle{
-            // position: absolute;
             width: $bar-width;
             height: $bar-height + $bar-spacing*2;
-            cursor: pointer;            
+            cursor: pointer;   
+            z-index: 2;         
+
+            @media screen and (min-width: 1021px) {
+               display: none;
+            }
         }
-        
+
         &__hamburger{
             transform: translateY($bar-spacing);
             background: rgba(255, 255, 255, 1);
@@ -74,8 +151,7 @@ header {
 
         &__hamburger,
         &__hamburger::after,
-        &__hamburger::before,
-        {
+        &__hamburger::before{
             height: $bar-height;
             width: $bar-width;
         }
