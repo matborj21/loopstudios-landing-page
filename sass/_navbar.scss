@@ -1,8 +1,8 @@
 header {
     .menu {
         padding-top: 2.5rem;
-        padding-left: 1.5625rem;
-        padding-right: 1.5625rem;
+        padding-left: $p-l-S;
+        padding-right: $p-r-S;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -10,12 +10,13 @@ header {
 
         @media screen and (min-width: 1440px) {
             padding-top: 5.3125rem;
-            padding-left: 13.75rem;
-            padding-right: 13.75rem; 
+            padding-left: $p-l-L;
+            padding-right: $p-r-L; 
         }
         @media screen and (min-width: 768px) {
-            padding-left: 6.25rem;
-            padding-right: 6.25rem; 
+            padding-left: $p-l-M;
+            padding-right: $p-r-M; 
+           
         }
 
         &__logo{
@@ -30,7 +31,7 @@ header {
 
             @media screen and (min-width: 768px) {
                 width: 12.5rem;
-                height: 2.8125;
+                height: 2.8125rem;
             }
 
             @media screen and (min-width: 968px) {
@@ -53,30 +54,30 @@ header {
             width: 100%;
             text-transform: uppercase;
             padding-top: 9.5rem;
-            padding-left: 1.5625rem;
-            padding-right: 1.5625rem;
-            
+            padding-left: $p-l-S;
+            padding-right: $p-r-S;
             height: 100vh;
             visibility: hidden;
             opacity: 0;
             transition: visibility 0s 500ms, opacity 500ms linear;
             z-index: 1;
+
             li:not(:last-child){
                 margin-bottom: 1.875rem;
             }
+            
             &.show {
                 visibility: visible;
                 opacity: 1;
                 transition: opacity 500ms ease-in-out;
             }
             @media screen and (min-width: 768px) {
-                padding-top: 185px;
-                padding-left: 100px;
-                padding-right: 100px; 
+                padding-top: 11.5625rem;
+                padding-left: 6.25rem;
+                padding-right: 6.25rem; 
             } 
 
             @media screen and (min-width: 1021px) {
-                
                 position: static;
                 visibility: visible;
                 opacity: 1;
@@ -119,6 +120,7 @@ header {
             background: rgba(255, 255, 255, 1);
             transition: all 0ms 300ms;
 
+            // to move the hamburger to the bottom
             &:before{
                 content: '';
                 position: absolute;
@@ -126,6 +128,7 @@ header {
                 background: rgba(255, 255, 255, 1);
                 transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
             }
+            // to move the hamburger to the top
             &:after {
                 content: "";
                 position: absolute;
@@ -158,5 +161,4 @@ header {
 
     }
 }
-
 

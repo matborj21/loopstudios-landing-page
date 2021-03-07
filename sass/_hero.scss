@@ -2,6 +2,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    height: 100vh;
 
     background-image: url(/dist/images/mobile/image-hero.jpg);
     background-repeat: no-repeat;
@@ -10,32 +11,32 @@
 
     @media screen and (min-width: 1022px) {
         background-image: url(/dist/images/desktop/image-hero.jpg);
-        background-repeat: no-repeat;
-        background-position: bottom bottom;
-        background-size:  cover;
         width: 100vw;
-        height: 650px;
+        height: 40.625rem;
         background-color: rgb(110, 110, 110);
         background-blend-mode: multiply;
+         
+        
     }
     h1 {
         // display: flex;
         // justify-content: center;
-        margin: 200px 25px;
-        border: 5px solid white;
+        margin: 12.5rem 1.5625rem;
+        border: 1px solid white;
         font-size: 2.375rem;
+        font-weight: 200;
         text-align: left;
         text-transform: uppercase;
-        padding: 20px;
+        padding: 1.25rem;
         color: white;
         font-family: $font-title;
         
         @media screen and (min-width: 768px) {
-            margin: 220px 100px;
-            font-size: 60px;
+            margin: 13.75rem 6.25rem;
+            font-size: 4.375rem;
         }
         @media screen and (min-width: 1022px) {
-           width: 600px;
+           width: 46.875rem;
         }
     }
 }
