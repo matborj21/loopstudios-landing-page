@@ -1,0 +1,94 @@
+.creation {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: $p-l-S;
+    padding-right: $p-r-S;
+
+
+    
+   
+
+    h2{
+        margin-bottom: 30px;
+        font-family: $font-title;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;        
+    }
+
+    button {
+        background-color: white;
+        margin: 30px auto;
+        width: 160px;
+        padding: 15px;
+        font-family: $font-title;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;        
+        border: 1px solid black; 
+        cursor: pointer;
+    }
+
+    &__picture{
+        // color: black;
+        padding-left: $p-l-S;
+        padding-right: $p-r-S;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-title;
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: left;
+
+        &:first-child{
+            background-image: url('/dist/images/mobile/image-deep-earth.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cards {
+            // background:  red;
+            min-height: 120px;
+            margin-bottom: 20px;
+            &:first-child{
+                background-image: url('/dist/images/mobile/image-deep-earth.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+    
+            }
+            &:nth-child(2){
+                background-image: url('/dist/images/mobile/image-night-arcade.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+    
+            }
+
+            &:nth-child(3){
+                background-image: url('/dist/images/mobile/image-night-arcade.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+    
+            }
+
+           
+            
+            &__title{
+                
+                color: white;
+            }
+        }
+    }
+}
