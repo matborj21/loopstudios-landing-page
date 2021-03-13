@@ -1,32 +1,44 @@
 .about {
+    position: relative;
     margin-top: 100vh;
     padding-left: $p-l-S;
     padding-right: $p-r-S;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fir,  1fr);
+
     @media screen and (min-width: 768px) {
-        position: relative;
-        top: 0;
-        left: 0;
+        padding-left: $p-l-S;
+        padding-right: $p-r-S;
+        margin-top: 100vh;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding-left: $p-l-L;
+        padding-right: $p-r-L;
         margin-top: auto;
-        padding-left: $p-l-M;
-        padding-right: $p-r-M;
     }
     
     &__image {
-        @media screen and (min-width: 768px) {
-            position: relative; 
-            top: 0;
-            left: 0;                 
+       background: url('/dist/images/mobile/image-interactive.jpg') no-repeat;
+       background-position: center center;
+       background-size: cover;
+    //    height: 200px;
+       min-height: 200px;
+
+       @media screen and (min-width: 768px) {
             background: url('/dist/images/desktop/image-interactive.jpg') no-repeat;
-            background-size: cover;
-            width: 70%;
-            height: 665px;
-        }
-        img {
+            grid-column: span 5; 
+            min-height: 400px;
+       }
+       @media screen and (min-width: 900px) {
+            grid-column: span 4;    
+            grid-row: 1;
+       }
+            
+       img {
             width: 100%;
-            height: 100%;
-            @media screen and (min-width: 768px) {
-                display: none;
-            }
+            // height: 100%;
         }
     }
 
@@ -35,17 +47,23 @@
         text-align: center;
         background-color: $White;
 
+        
+            @media screen and (min-width: 768px) {
+                grid-column: span 5;
+                grid-row: 2;
+                 
+            }
 
-        @media screen and (min-width: 768px) {
-            position: absolute;
-            top: 250px;
-            left: 750px;
-            padding: 100px;
-            width: 750px;
-            height: 365px;
-            
-
-        }
+            @media screen and (min-width: 900px) {
+                position: relative;
+                bottom: 200px;
+                right: 50px;
+                width: 600px;
+                height: 300px;
+                grid-column: 3 / span 2; 
+                grid-row: 2;
+                padding: 30px;
+            }
         h2{
             margin-bottom: 20px;
             font-family: $font-title;
@@ -54,8 +72,11 @@
             text-transform: uppercase;
             line-height: 1;
             @media screen and (min-width: 768px) {
-                text-align: left;
-                font-size: 55px;               
+                
+                font-size: 60px;               
+            }
+            @media screen and (min-width: 900px) {
+                font-size: 45px; 
             }
         }
 
@@ -63,8 +84,11 @@
             color: $DarkGray;
             line-height: 1.5;
             @media screen and (min-width: 768px) {
-                text-align: left;
-                font-size: 18px;          
+                // text-align: left;
+                font-size: 20px;          
+            }
+            @media screen and (min-width: 900px) {
+                font-size: 18px;   
             }
         }
     }

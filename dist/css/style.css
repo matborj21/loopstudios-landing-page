@@ -55,13 +55,6 @@ header .menu {
   }
 }
 
-@media screen and (min-width: 768px) {
-  header .menu {
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
-  }
-}
-
 header .menu__logo {
   width: 9.0625rem;
   height: auto;
@@ -272,43 +265,59 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 }
 
 .about {
+  position: relative;
   margin-top: 100vh;
   padding-left: 1.5625rem;
   padding-right: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -ms-grid-rows: (1fr)[auto-fir];
+      grid-template-rows: repeat(auto-fir, 1fr);
 }
 
 @media screen and (min-width: 768px) {
   .about {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-top: auto;
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    margin-top: 100vh;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    padding-left: 13.75rem;
+    padding-right: 13.75rem;
+    margin-top: auto;
+  }
+}
+
+.about__image {
+  background: url("/dist/images/mobile/image-interactive.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 200px;
 }
 
 @media screen and (min-width: 768px) {
   .about__image {
-    position: relative;
-    top: 0;
-    left: 0;
     background: url("/dist/images/desktop/image-interactive.jpg") no-repeat;
-    background-size: cover;
-    width: 70%;
-    height: 665px;
+    grid-column: span 5;
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about__image {
+    grid-column: span 4;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
 }
 
 .about__image img {
   width: 100%;
-  height: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .about__image img {
-    display: none;
-  }
 }
 
 .about__info {
@@ -319,12 +328,25 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 768px) {
   .about__info {
-    position: absolute;
-    top: 250px;
-    left: 750px;
-    padding: 100px;
-    width: 750px;
-    height: 365px;
+    grid-column: span 5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about__info {
+    position: relative;
+    bottom: 200px;
+    right: 50px;
+    width: 600px;
+    height: 300px;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / span 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    padding: 30px;
   }
 }
 
@@ -339,8 +361,13 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 768px) {
   .about__info h2 {
-    text-align: left;
-    font-size: 55px;
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about__info h2 {
+    font-size: 45px;
   }
 }
 
@@ -351,101 +378,12 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 768px) {
   .about__info p {
-    text-align: left;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
-.creation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 1.5625rem;
-  padding-right: 1.5625rem;
-}
-
-.creation h2 {
-  margin-bottom: 30px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.creation button {
-  background-color: white;
-  margin: 30px auto;
-  width: 160px;
-  padding: 15px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-.creation__picture {
-  padding-left: 1.5625rem;
-  padding-right: 1.5625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.creation__picture:first-child {
-  background-image: url("/dist/images/mobile/image-deep-earth.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.creation__picture img {
-  width: 100%;
-  height: auto;
-}
-
-.creation__picture .cards {
-  min-height: 120px;
-  margin-bottom: 20px;
-}
-
-.creation__picture .cards:first-child {
-  background-image: url("/dist/images/mobile/image-deep-earth.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.creation__picture .cards:nth-child(2) {
-  background-image: url("/dist/images/mobile/image-night-arcade.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.creation__picture .cards:nth-child(3) {
-  background-image: url("/dist/images/mobile/image-night-arcade.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.creation__picture .cards__title {
-  color: white;
+@media screen and (min-width: 900px) {
+  .about__info p {
+    font-size: 18px;
+  }
 }
