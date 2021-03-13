@@ -290,6 +290,7 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
     padding-left: 13.75rem;
     padding-right: 13.75rem;
     margin-top: auto;
+    margin-bottom: -200px;
   }
 }
 
@@ -385,5 +386,235 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 @media screen and (min-width: 900px) {
   .about__info p {
     font-size: 18px;
+  }
+}
+
+.creation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .creation {
+    margin-top: 50px;
+    padding-left: 6.25rem;
+    adding-right: 6.25rem;
+  }
+}
+
+.creation h2 {
+  margin-bottom: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  .creation h2 {
+    justify-self: flex-start;
+    margin-top: 50px;
+    font-size: 50px;
+    margin-left: 15px;
+    text-align: left;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.creation button {
+  background-color: white;
+  margin: 30px auto;
+  width: 160px;
+  padding: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .creation button {
+    position: relative;
+    top: -125px;
+    left: 503px;
+    margin-bottom: -116px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.creation__picture {
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+@media screen and (min-width: 1024px) {
+  .creation__picture {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.creation__picture .cards {
+  margin: 10px;
+  position: relative;
+  min-height: 120px;
+  margin-bottom: 20px;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.creation__picture .cards:first-child {
+  background-image: url("/dist/images/mobile/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:nth-child(2) {
+  background-image: url("/dist/images/mobile/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:nth-child(3) {
+  background-image: url("/dist/images/mobile/image-soccer-team.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:nth-child(4) {
+  background-image: url("/dist/images/mobile/image-grid.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:nth-child(5) {
+  background-image: url("/dist/images/mobile/image-from-above.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:nth-child(6) {
+  background-image: url("/dist/images/mobile/image-pocket-borealis.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:nth-child(7) {
+  background-image: url("/dist/images/mobile/image-curiosity.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.creation__picture .cards:last-child {
+  background-image: url("/dist/images/mobile/image-fisheye.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .creation__picture .cards {
+    max-width: 280px;
+  }
+  .creation__picture .cards:first-child {
+    background-image: url("/dist/images/desktop/image-deep-earth.jpg");
+  }
+  .creation__picture .cards:nth-child(2) {
+    background-image: url("/dist/images/desktop/image-night-arcade.jpg");
+  }
+  .creation__picture .cards:nth-child(3) {
+    background-image: url("/dist/images/desktop/image-soccer-team.jpg");
+    background-position: center top;
+  }
+  .creation__picture .cards:nth-child(4) {
+    background-image: url("/dist/images/desktop/image-grid.jpg");
+    background-position: center bottm;
+  }
+  .creation__picture .cards:nth-child(5) {
+    background-image: url("/dist/images/desktop/image-from-above.jpg");
+    background-position: center bottm;
+  }
+  .creation__picture .cards:nth-child(6) {
+    background-image: url("/dist/images/desktop/image-pocket-borealis.jpg");
+    background-position: center bottm;
+  }
+  .creation__picture .cards:nth-child(7) {
+    background-image: url("/dist/images/desktop/image-curiosity.jpg");
+    background-position: center bottm;
+  }
+  .creation__picture .cards:last-child {
+    background-image: url("/dist/images/desktop/image-fisheye.jpg");
+    background-position: center bottm;
+  }
+}
+
+.creation__picture .cards__title {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  padding-left: 35px;
+  color: white;
+  background-color: transparent;
+  width: 280px;
+  height: 100%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .creation__picture .cards__title {
+    padding-left: 0;
+    padding-top: 220px;
+    font-size: 30px;
+    white-space: pre;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .creation__picture .cards__title {
+    padding-left: 0;
+    padding-top: 390px;
+    font-size: 35px;
+    height: 600px;
+    left: -77px;
   }
 }

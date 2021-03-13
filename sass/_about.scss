@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fir,  1fr);
-
     @media screen and (min-width: 768px) {
         padding-left: $p-l-S;
         padding-right: $p-r-S;
@@ -17,6 +16,7 @@
         padding-left: $p-l-L;
         padding-right: $p-r-L;
         margin-top: auto;
+        margin-bottom: -200px;
     }
     
     &__image {

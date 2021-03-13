@@ -4,18 +4,29 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding-left: $p-l-S;
-    padding-right: $p-r-S;
+    padding-right: $p-r-S; 
 
-
+    @media screen and (min-width: 1024px) {
+        margin-top: 50px;
+        padding-left: $p-l-M;
+        adding-right: $p-r-M; 
     
-   
+    }
 
     h2{
         margin-bottom: 30px;
         font-family: $font-title;
         font-weight: 300;
         text-align: center;
-        text-transform: uppercase;        
+        text-transform: uppercase;     
+        @media screen and (min-width: 1024px) {
+            justify-self: flex-start;;
+            margin-top: 50px;
+            font-size: 50px;
+            margin-left: 15px;
+            text-align: left;
+            order: 1;
+        }
     }
 
     button {
@@ -29,6 +40,14 @@
         text-transform: uppercase;        
         border: 1px solid black; 
         cursor: pointer;
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            top: -125px;
+            left: 503px;
+            margin-bottom: -116px;
+            align-self: flex-start;
+            order: 2;
+        }
     }
 
     &__picture{
@@ -36,30 +55,27 @@
         padding-left: $p-l-S;
         padding-right: $p-r-S;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        padding:10px;
         font-family: $font-title;
         font-size: 20px;
         font-weight: 300;
         text-transform: uppercase;
         text-align: left;
-
-        &:first-child{
-            background-image: url('/dist/images/mobile/image-deep-earth.jpg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-
+        @media screen and (min-width: 1024px) {
+            order: 3;
         }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
+        
         .cards {
+            margin: 10px;
             // background:  red;
+            position: relative;
             min-height: 120px;
             margin-bottom: 20px;
+            width: 100%;
+            // min-width: 300px;
+            flex-grow: 1;
+
             &:first-child{
                 background-image: url('/dist/images/mobile/image-deep-earth.jpg');
                 background-repeat: no-repeat;
@@ -76,18 +92,107 @@
             }
 
             &:nth-child(3){
-                background-image: url('/dist/images/mobile/image-night-arcade.jpg');
+                background-image: url('/dist/images/mobile/image-soccer-team.jpg');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
-    
+            }
+            &:nth-child(4){
+                background-image: url('/dist/images/mobile/image-grid.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            &:nth-child(5){
+                background-image: url('/dist/images/mobile/image-from-above.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            &:nth-child(6){
+                background-image: url('/dist/images/mobile/image-pocket-borealis.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            &:nth-child(7){
+                background-image: url('/dist/images/mobile/image-curiosity.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            &:last-child{
+                background-image: url('/dist/images/mobile/image-fisheye.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
             }
 
+
            
+            @media screen and (min-width: 768px) {
+                max-width: 280px;
+                &:first-child{
+                    background-image: url('/dist/images/desktop/image-deep-earth.jpg');
+                }
+                &:nth-child(2){
+                    background-image: url('/dist/images/desktop/image-night-arcade.jpg');
+                }
+                &:nth-child(3){
+                    background-image: url('/dist/images/desktop/image-soccer-team.jpg');
+                    background-position: center top;
+                }
+                &:nth-child(4){
+                    background-image: url('/dist/images/desktop/image-grid.jpg');
+                    background-position: center bottm;
+                }
+                &:nth-child(5){
+                    background-image: url('/dist/images/desktop/image-from-above.jpg');
+                    background-position: center bottm;
+                }
+                &:nth-child(6){
+                    background-image: url('/dist/images/desktop/image-pocket-borealis.jpg');
+                    background-position: center bottm;
+                }
+                &:nth-child(7){
+                    background-image: url('/dist/images/desktop/image-curiosity.jpg');
+                    background-position: center bottm;
+                }
+                &:last-child{
+                    background-image: url('/dist/images/desktop/image-fisheye.jpg');
+                    background-position: center bottm;
+                }
+            }
+
+
             
             &__title{
-                
-                color: white;
+                position: relative;
+                top: 0;
+                left: 0;
+                // padding: 35px;
+                padding-top: 50px;
+                padding-left: 35px;
+                color: white;  
+                background-color: transparent;
+                width: 280px;
+                height: 100%;
+                cursor: pointer;
+                @media screen and (min-width: 768px) {
+                    padding-left: 0;
+                    padding-top: 220px;
+                    font-size: 30px;
+                    white-space: pre;
+                    height: 400px;
+                }
+                @media screen and (min-width: 1024px) {
+                    padding-left: 0;
+                    padding-top: 390px;
+                    font-size: 35px;
+                    height: 600px;
+                    left: -77px;
+                    
+                }
             }
         }
     }
