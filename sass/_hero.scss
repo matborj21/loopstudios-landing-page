@@ -12,11 +12,14 @@
     @media screen and (min-width: 1022px) {
         background-image: url(/dist/images/desktop/image-hero.jpg);
         width: 100vw;
-        height: 40.625rem;
+        height: 80vh;
         background-color: rgb(110, 110, 110);
         background-blend-mode: multiply;
          
-        
+    }
+
+    @media screen and (min-width: 1440px) {
+        min-height: 60vh;
     }
     h1 {
         // display: flex;
@@ -36,7 +39,10 @@
             font-size: 4.375rem;
         }
         @media screen and (min-width: 1022px) {
-           width: 46.875rem;
+            width: 50%;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 5.375rem;
         }
     }
 }

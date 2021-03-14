@@ -50,8 +50,8 @@ header .menu {
 @media screen and (min-width: 1440px) {
   header .menu {
     padding-top: 5.3125rem;
-    padding-left: 13.75rem;
-    padding-right: 13.75rem;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
   }
 }
 
@@ -233,9 +233,15 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   .hero {
     background-image: url(/dist/images/desktop/image-hero.jpg);
     width: 100vw;
-    height: 40.625rem;
+    height: 80vh;
     background-color: #6e6e6e;
     background-blend-mode: multiply;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    min-height: 60vh;
   }
 }
 
@@ -260,7 +266,13 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 1022px) {
   .hero h1 {
-    width: 46.875rem;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero h1 {
+    font-size: 5.375rem;
   }
 }
 
@@ -406,8 +418,17 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 @media screen and (min-width: 1024px) {
   .creation {
     margin-top: 50px;
-    padding-left: 6.25rem;
-    adding-right: 6.25rem;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .creation {
+    margin-top: auto;
+    padding-left: 13.75rem;
+    padding-right: 13.75rem;
+    left: 619px;
   }
 }
 
@@ -459,6 +480,12 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .creation button {
+    left: 619px;
+  }
+}
+
 .creation__picture {
   padding-left: 1.5625rem;
   padding-right: 1.5625rem;
@@ -467,12 +494,26 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px;
+  padding: 0;
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
   text-align: left;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (min-width: 1440px) {
+  .creation__picture {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .creation__picture {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -480,6 +521,7 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    margin: 50px auto;
   }
 }
 
@@ -492,6 +534,24 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+@media screen and (max-width: 360px) {
+  .creation__picture .cards {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .creation__picture .cards {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .creation__picture .cards {
+    max-width: 340px;
+  }
 }
 
 .creation__picture .cards:first-child {
@@ -551,9 +611,6 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 }
 
 @media screen and (min-width: 768px) {
-  .creation__picture .cards {
-    max-width: 280px;
-  }
   .creation__picture .cards:first-child {
     background-image: url("/dist/images/desktop/image-deep-earth.jpg");
   }
@@ -594,7 +651,6 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   padding-left: 35px;
   color: white;
   background-color: transparent;
-  width: 280px;
   height: 100%;
   cursor: pointer;
 }
@@ -616,5 +672,135 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
     font-size: 35px;
     height: 600px;
     left: -77px;
+  }
+}
+
+.footer {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__left {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.footer__left .footer-logo {
+  width: 140px;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__left .footer-logo {
+    width: 200px;
+  }
+}
+
+.footer__left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__left ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer__left ul li {
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__left ul li {
+    font-size: 1.25rem;
+  }
+}
+
+.footer__left ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__left ul li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.footer img {
+  width: 100%;
+  height: auto;
+}
+
+.footer__right .soc-icon {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  margin: 10px auto;
+}
+
+.footer__right .soc-icon i:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer__right .copyright {
+  color: #8c8c8c;
+}
+
+.footer .attribution {
+  display: none;
+  color: white;
+}
+
+.footer .attribution a {
+  color: #8c8c8c;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .attribution {
+    display: block;
   }
 }

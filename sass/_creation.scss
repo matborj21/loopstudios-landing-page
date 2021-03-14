@@ -8,9 +8,14 @@
 
     @media screen and (min-width: 1024px) {
         margin-top: 50px;
-        padding-left: $p-l-M;
-        adding-right: $p-r-M; 
-    
+        padding-left: $p-l-S;
+        padding-right: $p-r-S; 
+    }
+    @media screen and (min-width: 1440px) {
+        margin-top: auto;
+        padding-left: $p-l-L;
+        padding-right: $p-r-L; 
+        left: 619px;
     }
 
     h2{
@@ -48,6 +53,12 @@
             align-self: flex-start;
             order: 2;
         }
+
+        @media screen and (min-width: 1440px) {
+            left: 619px;
+        }
+
+
     }
 
     &__picture{
@@ -56,14 +67,23 @@
         padding-right: $p-r-S;
         display: flex;
         flex-wrap: wrap;
-        padding:10px;
+        padding: 0;
         font-family: $font-title;
         font-size: 20px;
         font-weight: 300;
         text-transform: uppercase;
         text-align: left;
+        justify-content: space-around;
+
+        @media screen and (min-width: 1440px) {
+            padding: 0;
+        }
+        @media screen and (max-width: 360px) {
+            padding: 0;
+        }
         @media screen and (min-width: 1024px) {
             order: 3;
+            margin: 50px auto;
         }
         
         .cards {
@@ -73,15 +93,26 @@
             min-height: 120px;
             margin-bottom: 20px;
             width: 100%;
-            // min-width: 300px;
+            // min-width: 280px;
             flex-grow: 1;
+
+            @media screen and (max-width: 360px) {
+                margin-bottom: 5px;
+            }
+            
+            @media screen and (min-width: 1024px) {
+                max-width: 300px;
+            }
+            @media screen and (min-width: 1440px) {
+                max-width: 340px;
+            }
+
 
             &:first-child{
                 background-image: url('/dist/images/mobile/image-deep-earth.jpg');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
-    
             }
             &:nth-child(2){
                 background-image: url('/dist/images/mobile/image-night-arcade.jpg');
@@ -131,7 +162,7 @@
 
            
             @media screen and (min-width: 768px) {
-                max-width: 280px;
+            //    width: 280px;
                 &:first-child{
                     background-image: url('/dist/images/desktop/image-deep-earth.jpg');
                 }
@@ -175,9 +206,11 @@
                 padding-left: 35px;
                 color: white;  
                 background-color: transparent;
-                width: 280px;
+                // width: 280px;    
                 height: 100%;
                 cursor: pointer;
+
+
                 @media screen and (min-width: 768px) {
                     padding-left: 0;
                     padding-top: 220px;
@@ -191,7 +224,7 @@
                     font-size: 35px;
                     height: 600px;
                     left: -77px;
-                    
+                    // max-width: 345px;
                 }
             }
         }
