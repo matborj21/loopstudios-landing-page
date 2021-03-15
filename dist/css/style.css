@@ -379,9 +379,15 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   line-height: 1;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1600px) {
   .about__info h2 {
     font-size: 75px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about__info h2 {
+    font-size: 65px;
   }
 }
 
