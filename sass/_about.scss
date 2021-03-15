@@ -4,66 +4,65 @@
     padding-left: $p-l-S;
     padding-right: $p-r-S;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fir,  1fr);
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 10%;
     @media screen and (min-width: 768px) {
         padding-left: $p-l-S;
         padding-right: $p-r-S;
         margin-top: 100vh;
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
     }
 
     @media screen and (min-width: 1024px) {
         padding-left: $p-l-L;
         padding-right: $p-r-L;
         margin-top: auto;
-        margin-bottom: -200px;
+        margin-bottom: auto;
     }
     
     &__image {
-       background: url('/dist/images/mobile/image-interactive.jpg') no-repeat;
-       background-position: center center;
-       background-size: cover;
-    //    height: 200px;
-       min-height: 200px;
-
-       @media screen and (min-width: 768px) {
-            background: url('/dist/images/desktop/image-interactive.jpg') no-repeat;
-            grid-column: span 5; 
-            min-height: 400px;
-       }
-       @media screen and (min-width: 900px) {
-            grid-column: span 4;    
-            grid-row: 1;
-       }
-            
+        grid-column: 1 / 8;
+        grid-row: 1;
        img {
             width: 100%;
-            // height: 100%;
+            height: auto;
+            display: block;
         }
     }
 
     &__info{
-        margin: 50px auto;
-        text-align: center;
-        background-color: $White;
+        // margin: 50px auto;
+        grid-column: 6 / -1;
+        grid-row: 1;
+        z-index: 1;
+        // padding-top: 50%;
+        @media screen and (max-width: 500px) {
+            grid-row: 2;                 
+        }
+        .info-bg {
+            background-color: white;
+            text-align: center;
+    
+            margin-top: 40%;
+            @media screen and (max-width: 500px) {
+                margin-top: 10%;              
+            }
 
+            @media screen and (min-width: 1440px) {
+                padding: 10%;
+            }
+             @media screen and (min-width: 768px) {
+                padding: 10%;
+           }
+           @media screen and (min-width: 500px) {
+            padding: 10%;
+            }
+           
+        }
         
-            @media screen and (min-width: 768px) {
-                grid-column: span 5;
-                grid-row: 2;
-                 
-            }
-
-            @media screen and (min-width: 900px) {
-                position: relative;
-                bottom: 200px;
-                right: 50px;
-                width: 600px;
-                height: 300px;
-                grid-column: 3 / span 2; 
-                grid-row: 2;
-                padding: 30px;
-            }
+            
         h2{
             margin-bottom: 20px;
             font-family: $font-title;
@@ -71,24 +70,29 @@
             font-size: 2rem;
             text-transform: uppercase;
             line-height: 1;
-            @media screen and (min-width: 768px) {
-                
-                font-size: 60px;               
+            @media screen and (min-width: 1440px) {
+                font-size: 75px; 
             }
-            @media screen and (min-width: 900px) {
-                font-size: 45px; 
+            @media screen and (max-width: 768px) {
+                font-size: 40px;               
+            }
+            @media screen and (max-width: 500px) {
+                font-size: 30px;               
             }
         }
 
         p{
+            width: 100%;
             color: $DarkGray;
             line-height: 1.5;
-            @media screen and (min-width: 768px) {
-                // text-align: left;
-                font-size: 20px;          
+            @media screen and (min-width: 1440px) {
+                font-size: 25px; 
             }
-            @media screen and (min-width: 900px) {
-                font-size: 18px;   
+            @media screen and (max-width: 768px) {
+                font-size: 18px;          
+            }
+            @media screen and (max-width: 500px) {
+                font-size: 15px;               
             }
         }
     }
