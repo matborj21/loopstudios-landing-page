@@ -305,6 +305,15 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 1024px) {
   .about {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .about {
     padding-left: 13.75rem;
     padding-right: 13.75rem;
     margin-top: auto;
@@ -387,7 +396,7 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 1440px) {
   .about__info h2 {
-    font-size: 65px;
+    font-size: 55px;
   }
 }
 
@@ -409,9 +418,15 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   line-height: 1.5;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1600px) {
   .about__info p {
     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about__info p {
+    font-size: 20px;
   }
 }
 

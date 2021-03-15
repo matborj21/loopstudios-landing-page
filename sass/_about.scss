@@ -16,6 +16,12 @@
     }
 
     @media screen and (min-width: 1024px) {
+        padding-left: $p-l-M;
+        padding-right: $p-r-M;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    @media screen and (min-width: 1600px) {
         padding-left: $p-l-L;
         padding-right: $p-r-L;
         margin-top: auto;
@@ -74,7 +80,7 @@
                 font-size: 75px; 
             }
             @media screen and (min-width: 1440px) {
-                font-size: 65px; 
+                font-size: 55px; 
             }
             @media screen and (max-width: 768px) {
                 font-size: 40px;               
@@ -88,8 +94,11 @@
             width: 100%;
             color: $DarkGray;
             line-height: 1.5;
-            @media screen and (min-width: 1440px) {
+            @media screen and (min-width: 1600px) {
                 font-size: 25px; 
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 20px; 
             }
             @media screen and (max-width: 768px) {
                 font-size: 18px;          
