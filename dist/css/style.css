@@ -446,9 +446,15 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 @media screen and (min-width: 1440px) {
   .creation {
     margin-top: auto;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .creation {
     padding-left: 13.75rem;
     padding-right: 13.75rem;
-    left: 619px;
   }
 }
 
@@ -570,7 +576,7 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
 
 @media screen and (min-width: 1440px) {
   .creation__picture .cards {
-    max-width: 340px;
+    max-width: 320px;
   }
 }
 

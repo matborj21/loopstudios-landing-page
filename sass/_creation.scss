@@ -11,12 +11,18 @@
         padding-left: $p-l-S;
         padding-right: $p-r-S; 
     }
+
     @media screen and (min-width: 1440px) {
         margin-top: auto;
+        padding-left: $p-l-S;
+        padding-right: $p-r-S; 
+    }
+
+    @media screen and (min-width: 1600px) {
         padding-left: $p-l-L;
         padding-right: $p-r-L; 
-        left: 619px;
     }
+
 
     h2{
         margin-bottom: 30px;
@@ -104,7 +110,7 @@
                 max-width: 300px;
             }
             @media screen and (min-width: 1440px) {
-                max-width: 340px;
+                max-width: 320px;
             }
 
 
