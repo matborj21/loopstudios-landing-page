@@ -58,7 +58,7 @@ header .menu {
 header .menu__logo {
   width: 9.0625rem;
   height: auto;
-  z-index: 2;
+  z-index: 5;
 }
 
 header .menu__logo img {
@@ -97,7 +97,7 @@ header .menu__navbar {
   opacity: 0;
   -webkit-transition: visibility 0s 500ms, opacity 500ms linear;
   transition: visibility 0s 500ms, opacity 500ms linear;
-  z-index: 10;
+  z-index: 2;
 }
 
 header .menu__navbar li:not(:last-child) {
@@ -150,7 +150,7 @@ header .menu__toggle {
   width: 1.625rem;
   height: 1.1875rem;
   cursor: pointer;
-  z-index: 2;
+  z-index: 5;
 }
 
 @media screen and (min-width: 1021px) {
