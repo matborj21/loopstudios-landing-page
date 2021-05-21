@@ -12,7 +12,7 @@
         padding-right: $p-r-S; 
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1280px) {
         margin-top: auto;
         padding-left: $p-l-S;
         padding-right: $p-r-S; 
@@ -105,10 +105,14 @@
             @media screen and (max-width: 360px) {
                 margin-bottom: 5px;
             }
+            @media screen and (min-width: 768px) {
+                max-width: 280px;
+            }
             
             @media screen and (min-width: 1024px) {
-                max-width: 300px;
+                max-width: 280px;
             }
+            
             @media screen and (min-width: 1440px) {
                 max-width: 320px;
             }

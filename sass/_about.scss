@@ -11,7 +11,7 @@
         padding-right: $p-r-S;
         margin-top: 100vh;
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 540px) {
         grid-template-columns: 1fr;
     }
 
@@ -52,6 +52,9 @@
             text-align: center;
     
             margin-top: 40%;
+            @media screen and (max-width: 540px) {
+                margin-top: 80%;             
+            }
             @media screen and (max-width: 500px) {
                 margin-top: 10%;              
             }
@@ -62,8 +65,9 @@
              @media screen and (min-width: 768px) {
                 padding: 10%;
            }
-           @media screen and (min-width: 500px) {
-            padding: 10%;
+           @media screen and (max-width: 539px) {
+                padding: 10%;
+                text-align: justify;
             }
            
         }
@@ -104,8 +108,9 @@
                 font-size: 18px;          
             }
             @media screen and (max-width: 500px) {
-                font-size: 15px;               
+                font-size: 15px;              
             }
         }
+           
+        }
     }
-}

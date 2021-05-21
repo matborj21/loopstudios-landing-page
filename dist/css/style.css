@@ -296,7 +296,7 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -355,6 +355,12 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   margin-top: 40%;
 }
 
+@media screen and (max-width: 540px) {
+  .about__info .info-bg {
+    margin-top: 80%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about__info .info-bg {
     margin-top: 10%;
@@ -373,9 +379,10 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 539px) {
   .about__info .info-bg {
     padding: 10%;
+    text-align: justify;
   }
 }
 
@@ -464,7 +471,7 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .creation {
     margin-top: auto;
     padding-left: 1.5625rem;
@@ -589,9 +596,15 @@ header .menu__hamburger, header .menu__hamburger::after, header .menu__hamburger
   }
 }
 
+@media screen and (min-width: 768px) {
+  .creation__picture .cards {
+    max-width: 280px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .creation__picture .cards {
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 
